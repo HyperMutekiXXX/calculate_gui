@@ -3,7 +3,6 @@ package service
 import (
 	"calculate_gui/constant"
 	"calculate_gui/internal/model"
-	"fmt"
 )
 
 var FeeRangeType = map[int32][]model.FeeRange{
@@ -55,7 +54,5 @@ func calculateBidAgentFee(amount float64, feeRanges []model.FeeRange) float64 {
 }
 
 func CalFee(amount float64, feeType int32) float64 {
-	res := calculateBidAgentFee(amount, FeeRangeType[feeType])
-	fmt.Println(res)
-	return res
+	return calculateBidAgentFee(amount, FeeRangeType[feeType])
 }
