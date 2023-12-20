@@ -1,6 +1,7 @@
 package main
 
 import (
+	"calculate_gui/internal/service"
 	"context"
 	"fmt"
 )
@@ -24,4 +25,8 @@ func (a *App) startup(ctx context.Context) {
 // Greet returns a greeting for the given name
 func (a *App) Greet(name string) string {
 	return fmt.Sprintf("Hello %s, It's show time!", name)
+}
+
+func (a *App) CalFee(amount float64, feeType int32) float64 {
+	return service.CalFee(amount, feeType)
 }

@@ -1,4 +1,4 @@
-module changeme
+module calculate_gui
 
 go 1.18
 
